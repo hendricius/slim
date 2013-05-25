@@ -392,7 +392,6 @@ module Slim
       delimiter = nil
       if @line =~ ATTR_DELIM_REGEX
         if $&.size > 1
-          warn "#{options[:file]}:#{@lineno} - spaces around attribute delimiters will be allowed in Slim 2.0. Your code is incompatible."
         else
           delimiter = DELIMITERS[$&]
           @line.slice!(0)
